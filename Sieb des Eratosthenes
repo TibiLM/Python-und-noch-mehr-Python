@@ -1,0 +1,25 @@
+Schranke = 50
+NListe = [True]*(Schranke+1)
+p = 2
+while (p <= Schranke):
+    if (NListe[p] == True):
+        for i in range(p*2, Schranke+1, p):
+             NListe[i] = False
+    p += 1
+
+positionentsprichtzahl = [ i for i in range(2,len(NListe)) if NListe[i] == True ]
+print(f"Dies sind die Primzahlen bis zur Schranke {Schranke}:", positionentsprichtzahl)
+
+#oder anders:
+
+Schranke = 50
+NListe = [True]*(Schranke+1)
+p = 2
+while (p*p <= Schranke):
+    if (NListe[p] == True):
+        for i in range(p*p, Schranke+1, p):
+             NListe[i] = False
+    p += 1
+
+positionentsprichtzahl = [ i for i in range(2,len(NListe)) if NListe[i] == True ]
+print(f"Dies sind die Primzahlen bis zur Schranke {Schranke}:", positionentsprichtzahl)
