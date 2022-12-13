@@ -1,0 +1,16 @@
+import math
+
+Liste = [22.25, 23.01, 22.12, 22.56, 23.42, 22.11, 22.87, 22.5] # Liste von Messwerten
+
+def mittelwert(liste):
+    return sum(Liste)/len (Liste)
+def fehler(liste):
+    return standardabw(liste) / math.sqrt(len(liste))
+def standardabw(liste):
+    summe = 0
+    for el in liste:
+        summe += (el - mittelwert(liste)) ** 2
+    return math.sqrt(summe / (len(liste) - 1))
+print ('Mittelwert:', round(mittelwert(Liste), 2)) #gerundet auf zwei Nachkommastellen
+print('Fehler:', round(fehler(Liste), 2))
+print('Standardabweichung:', round(standardabw(Liste), 2))
