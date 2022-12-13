@@ -1,0 +1,18 @@
+liste = list (range (-30,41,5)) # von -30 bis 40 °C in fünfer Schritten
+
+def umrechnung (C):
+    return C*(9/5)+32
+
+for i in liste:
+    ergebnisinfahrenheit = umrechnung(i)
+    print (f"{i}°C sind {ergebnisinfahrenheit}°F")
+    
+    
+    
+    
+    
+    #Das Ergebnis sieht dann so aus:
+    #-30°C sind -22.0°F
+    #-25°C sind -13.0°F
+    #-20°C sind -4.0°F
+    #-15°C sind 5.0°F etc.
